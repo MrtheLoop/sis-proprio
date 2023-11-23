@@ -7,7 +7,7 @@ Class Conexao
     protected $porta = 5432;
     protected $dbname = "teste";
     protected $usuario = "postgres";
-    protected $senha = "mss@50ft2020";
+    protected $senha = "";
     protected $con = null;
 
 
@@ -30,11 +30,11 @@ function close() {
 
 function statusCon() {
     if(!$this->con){
-        echo "<h3>Essa merda não conectou não, seu bosta</h3>";
+        echo "<h3>EErro ao conectar</h3>";
         exit;
     }
     else {
-        echo "<h1>PARABENS SEU BOSTA, CONECTOU NESSA BUCETA</h1>";
+        echo "<h1>Conexão realizada com sucesso</h1>";
     }
 }
 }
