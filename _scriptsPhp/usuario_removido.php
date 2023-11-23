@@ -10,6 +10,8 @@
 
     <?php
     
+    // Função ainda em desenvolvimento
+
     $conexao = new Conexao();
     $conexao->open();
 

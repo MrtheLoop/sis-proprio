@@ -10,22 +10,32 @@
     <?php
     include 'conexao.php';
 
+    // Conexão com a DB
+
     $conexao = new Conexao();
     $conexao->open();
+
+    // Obtém informações de entrada do usuário
 
     $nome = $_GET["nome"];
     $sexo = $_GET["sexo"];
     $ano_nascimento = $_GET["ano_nascimento"];
     $sql = "INSERT INTO usuarios (nome_usuario, ano_nascimento, sexo) VALUES ('$nome', '$ano_nascimento', '$sexo');";
    
+    // Exibe informações inseridas
+
     echo "Me chamo $nome, sou do sexo $sexo e nasci no ano de $ano_nascimento";
+
+    // Executa a query na DB
 
     $result = pg_query($sql);
 
+    // Resultado da query
+
     if($result){
-        echo "Inserção de usuário realizada";
+        echo "Inserção de usuário realizada.";
     } else {
-        echo "Houve algum erro nessa merda";
+        echo "Houve algum erro, tente novamente.";
     }
 
     $conexao->close();
