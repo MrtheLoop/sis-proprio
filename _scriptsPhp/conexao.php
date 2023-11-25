@@ -30,7 +30,7 @@ function close() {
 
 function statusCon() {
     if(!$this->con){
-        echo "<h3>EErro ao conectar</h3>";
+        echo "<h3>Erro ao conectar</h3>";
         exit;
     }
     else {
